@@ -3,6 +3,7 @@ import { signOutAction } from "@/actions/auth"
 import { Badge } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { initials } from "@/lib/utils"
+import { LogoMark } from "@/components/logo"
 
 export async function Header() {
   const user = await requireUser()
@@ -11,6 +12,7 @@ export async function Header() {
     <header className="flex h-14 items-center justify-between gap-3 border-b border-border bg-card px-4 md:px-6">
       {/* Mobile: the dashboard is served on wider screens first */}
       <div className="flex items-center gap-2 md:hidden">
+        <LogoMark className="size-7" />
         <span className="font-semibold">EduDesk</span>
       </div>
 

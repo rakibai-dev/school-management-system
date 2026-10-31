@@ -1,6 +1,7 @@
 import { Suspense } from "react"
 import { login } from "@/actions/auth"
 import { LoginForm } from "./login-form"
+import { Logo } from "@/components/logo"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 export const metadata = { title: "Sign in" }
@@ -19,11 +20,10 @@ export default function LoginPage(
     <main className="flex min-h-dvh items-center justify-center bg-muted/40 p-4">
       <div className="w-full max-w-sm space-y-6">
         <div className="text-center">
-          <div className="mx-auto mb-3 flex size-12 items-center justify-center rounded-xl bg-primary text-primary-foreground text-xl font-bold">
-            E
+          <div className="mx-auto mb-2 max-w-full">
+            <Logo className="h-12 max-w-full" />
           </div>
-          <h1 className="text-2xl font-semibold tracking-tight">EduDesk</h1>
-          <p className="mt-1 text-sm text-muted-foreground">
+          <p className="text-sm text-muted-foreground">
             Sign in to the school management system
           </p>
         </div>
